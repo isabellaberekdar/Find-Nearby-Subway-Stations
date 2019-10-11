@@ -1,0 +1,36 @@
+/* Holds search bar container, stations list */
+.Search {
+  display: flex;
+  justify-content: center;
+
+}
+
+.SearchBarContainer {
+  display: inline-flex;
+  background-color: #ffffff;
+  padding:1em;
+  border: .2em solid rgb(255, 255, 255);
+  align-items: center;
+  width: 100%;
+}
+
+.SearchBar {
+  border: .1rem solid transparent;
+  padding-left: 1.5em;
+  font-size: 1.75em;
+  font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.SearchBarContainer:focus {
+  color: pink;
+}
+
+.SearchBarContainer i {
+
+}
+
+input:focus {
+  outline:none;
+}

@@ -1,0 +1,9 @@
+
+.Body {
+    font-size: 0.7em;
+}
+
+input::placeholder {
+    color: black
+}
+

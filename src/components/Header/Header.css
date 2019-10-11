@@ -1,0 +1,67 @@
+.HeaderContainer {
+    background-color: rgb(83, 83, 83);
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0em;
+
+
+/*   background-color: #f3f3f3;
+  color: rgb(0, 0, 0);
+  flex-direction: row;
+  height: 3em;
+  display: flex; */
+ /*  justify-content: center; */ /* align horizontal */
+  /* align-items: center; */ /* align vertical */
+/*
+    min-height: 2rem;
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle; */
+}
+
+.HeaderItems {
+   display: flex;
+   flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.HeaderMiddle {
+  position: absolute;
+  left: 0;
+  margin-left: 8em;
+  font: 2em 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.HeaderMiddle a {
+  color: rgb(231, 231, 231);
+  text-decoration: none;
+  -o-transition:.75s;
+  -ms-transition:.75s;
+  -moz-transition:.75s;
+  -webkit-transition:.75s;
+  /* ...and now for the proper property */
+  transition:.75s;
+}
+
+
+a:hover {
+  color: rgb(134, 194, 194);
+}
+
+.HeaderRight {
+  position: absolute;
+  right: 0;
+  margin-right: 7em;
+  font: 1.3em 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+/* 
+.maplogo {
+  width: 1em;
+  height: 1em;
+  margin-right: .5em;
+  margin-top: .1em;
+} */

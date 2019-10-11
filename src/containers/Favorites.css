@@ -1,0 +1,61 @@
+.FavoritesContainer {
+    padding-top: 0em;
+    padding-bottom: 0em;
+    display: flex;    
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    background-color: #ffffff;
+    box-shadow: 15px 15px rgb(199, 156, 170);
+    width: 50em;
+    height: 60em;
+    margin-top: 7em;
+}
+
+.Favorites {
+    display: flex;    
+    flex-direction: column;
+    width: 50%;
+    padding: 2em; 
+    align-items: center;
+}
+
+.Favorites h1 {
+    font-size: 2em;
+    font-style: italic;
+    letter-spacing: 0.07em;
+}
+
+.Favorites label {
+    font-size: 1.4em;
+    margin-top: 1em;
+
+}
+
+.ServiceInfo img {
+    margin-right: .7em;
+    width: 2em;
+    height: 2em;
+}
+
+.Favorites button {
+    padding-top: .9em;
+    padding-bottom: .9em;
+    width: 50%;
+    background-color: rgb(236, 220, 130);
+    border-color: transparent;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.Favorites input {
+    padding: .5em;
+    margin: .6em;
+    font-size: 1.2em;
+    box-shadow: 2px 2px rgb(236, 220, 130);
+    border-color: rgb(43, 43, 43)
+}
+
