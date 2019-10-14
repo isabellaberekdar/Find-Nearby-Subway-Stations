@@ -1,8 +1,4 @@
 .stationDetail {
-/*   border: black .2em solid;
- */ 
-/*   background-color: #e03b3b;
- *//*   margin-top: 5em; */
   text-align: center;
   width: 100%;
   height: 100%;
@@ -15,15 +11,12 @@
 .DetailStations {
   display: flex;
   flex-direction: row;
-  
- /*  background-color: rgb(255, 73, 73); */
 }
 
 .stationDetail img {
   height: 1.5rem;
   margin: .4em;
   margin-right: 1em;
-
   width: 1.5rem;
 }
 
@@ -34,11 +27,12 @@
 }
 
 .StationName {
-  background-color: rgb(159, 193, 199);
+  background-color: rgb(218, 230, 230);
   margin-bottom: 2.5em;
-  padding: 1em;
+  padding: .8vh;
   letter-spacing: .15em;
   color: rgb(0, 0, 0);
+  font-size: .8em;
 }
 
 .ServiceInfo {
@@ -48,6 +42,5 @@
   margin-bottom: 1em;
   align-items: center;
   width: 15em;
-  
   border-top: .5em rgb(228, 233, 238) solid;
 }

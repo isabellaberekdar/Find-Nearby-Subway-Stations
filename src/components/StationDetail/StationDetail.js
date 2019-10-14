@@ -7,14 +7,10 @@ import Status from '../Status/Status'
 
 
 const StationDetail = props => {
-
-
   let showDetail = false;
   if (props.station.trains !== 'unknown') {
     showDetail = true;
   }
-
-
     if (showDetail) {
       return (
     <div className='stationDetail'>

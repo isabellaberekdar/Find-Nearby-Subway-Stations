@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 import { connect } from 'react-redux'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { logout } from '../../redux/actions/auth'
 
 const Header = props => {
@@ -33,8 +33,7 @@ const Header = props => {
         <div className='HeaderContainer'>
             <div className='HeaderItems'>
                 <div className='HeaderMiddle'>
-{/*                     <img className='maplogo' src={icon}></img>
- */}                    <Link to='/'>{props.title}</Link>
+                    <Link to='/'>{props.title}</Link>
                 </div>
                 <div className='HeaderRight'>
                     {header_links}

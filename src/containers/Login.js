@@ -65,7 +65,6 @@ class Login extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    error: state.errors,
     isAuthenticated: state.auth.isAuthenticated
 })
  

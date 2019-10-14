@@ -54,8 +54,6 @@ export const getFavorites = () => (dispatch, getState) => {
                 payload: {id: id, favorites: lines}         // remove id? also from serializer
             })
         }).catch(error => console.log(error)
-            //dispatch(
-            //returnErrors(error.response.data, error.response.status))
         )
 }
 

@@ -13,18 +13,10 @@ class App extends React.Component {
   componentDidMount() {
     // loads user info into local storage, if the user is logged in
     store.dispatch(loadUser())
+    // loads user's favorite stations
     store.dispatch(getFavorites())
-    //console.log('called getfavorites in APP.JS', this.props.favorites)
 
-    // loads user's favorites information (if logged in)
-    // IF LOGGED IN LOAD FAVORITES
-    //if (store.getState().auth.token) {
-      //   console.log(store.getState().auth.token)
-    //  store.dispatch(loadFavorites())
-    //}
   }
-
-  
 
   render() {
     return (

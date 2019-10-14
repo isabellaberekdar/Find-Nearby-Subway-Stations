@@ -20,7 +20,7 @@ class Favorites extends React.Component {
               <div className='Favorites'>
                 <h1>Your Favorite Lines</h1>
                 {this.props.favorites.length === 0 ?
-                    (<p>You haven't favorited any lines yet. Search for a station on the homepage to add some.</p>)
+                    (<p>You haven't favorited any lines yet. Search for a station on the homepage or find stations near you to add some.</p>)
                 :
                 this.props.favorites.map(line => {
                   const line_name = get_train[line].name

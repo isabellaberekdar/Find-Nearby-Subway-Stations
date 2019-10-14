@@ -9,6 +9,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'.*', index, name='index'),
 ]
-
-""" urlpatterns += re_path(r'.*', index)
- """

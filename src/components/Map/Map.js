@@ -84,63 +84,38 @@ class Map extends React.Component {
 
     // Called when the button is pushed - user submits location
     findStations = async (location) => {
-        // save the user's coordinates
-        await this.setState({
-            lat: location.coords.latitude,
-            lon: location.coords.longitude,
-        })
-        const lat = location.coords.latitude
-        const lon = location.coords.longitude
+        const lat = 40.76
+        const lon = -73.98
+
         this.props.setUserCoordinates(lat, lon)
 
-        L.circle([this.state.lat, this.state.lon], {
+        L.circle([lat, lon], {
             color: 'rgb(134, 194, 194)',
             fillColor: 'rgb(134, 194, 194)',
             fillOpacity: 0.8,
             radius: 25
         }).addTo(this.state.map)  
 
-        this.state.map.setView([this.state.lat, this.state.lon], 14.5)
-
-        this.setStations()
-    }
-
-
-
-    // remove this
-    setStations = async () => {
-        // remove all of this
-        const url = 'https://data.cityofnewyork.us/api/views/kk4q-3rt2/rows.json'
-        const request = await fetch(url)
-        const {data} = await request.json()
-
-        await this.setState({ stations: data })
-        this.findNearby();
-    }
-
-    findNearby = () => {
-        const nearby_stations = this.state.stations.filter(station => this.isNearby(station))
+        this.state.map.setView([lat, lon], 14.5)
+        const nearby_stations = this.props.stations.filter(station => this.isNearby(station, lat, lon))
         this.props.setNearbyStations(nearby_stations)
-        //console.log(nearby_stations)
     }
 
-
-    isNearby = station => {
+    isNearby = (station, user_lat, user_lon) => {
         // extracts coordinates
-        let coordinates = station[11].slice(7, -1)
-        coordinates = coordinates.split(' ')
+        let coordinates = station.coordinates
 
         // converts coordinates into floats
         const subway_lon = parseFloat(coordinates[0])
         const subway_lat = parseFloat(coordinates[1])
 
         // if the station is close to the user, add the station to the map
-        if (this.nearby(this.state.lat, subway_lat)  && this.nearby(this.state.lon, subway_lon)) {
-            const name = station[10]
-            const lines = station[12]
-            const notes = station[13]
+        if (this.nearby(user_lat, subway_lat)  && this.nearby(user_lon, subway_lon)) {
+            const name = station.name
+            const lines = station.trains_list
+            const notes = station.notes
 
-            const marker = L.marker([subway_lat, subway_lon], )
+            const marker = L.marker([subway_lat, subway_lon])
                 .addTo(this.state.map)
                 .bindPopup(`<b><h5></b>${name}<br>${lines}<br></h5><i>${notes}</i>`)
                 .openPopup();
@@ -154,8 +129,8 @@ class Map extends React.Component {
         return (
             <div className='MapContainer'>
                 <div id="map" className='Map'></div>
-{/*                 <button id='location-button' onClick={() => this.setMap()}>Find Nearby Stations</button>
- */}           </div>
+                <button id='location-button' onClick={() => this.setMap()}>Find Nearby Stations</button>
+          </div>
         )
     }
 }

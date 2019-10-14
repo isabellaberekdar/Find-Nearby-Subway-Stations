@@ -22,7 +22,15 @@ const initialState = {
         trains_string: 'unknown', 
         train_icons: 'unknown', 
         notes: 'unknown'
-    },           
+    },
+    nearby_station_detail: {        // the station that is currently being displayed in the nearby stations detail box
+        name: 'unknown',
+        coordinates: 'unknown', 
+        trains: 'unknown',
+        trains_string: 'unknown', 
+        train_icons: 'unknown', 
+        notes: 'unknown'
+    },       
     markers: null,                  // the group of markers currently being displayed on the map
     service_information: null,      // information about current subway service
     time_updated: null,             // timestamp of when the subway service information was updated by the mta

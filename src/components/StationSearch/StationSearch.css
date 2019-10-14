@@ -8,7 +8,7 @@
 .SearchBarContainer {
   display: inline-flex;
   background-color: #ffffff;
-  padding:1em;
+  padding:.5em;
   border: .2em solid rgb(255, 255, 255);
   align-items: center;
   width: 100%;
@@ -17,7 +17,7 @@
 .SearchBar {
   border: .1rem solid transparent;
   padding-left: 1.5em;
-  font-size: 1.75em;
+  font-size: 1.35em;
   font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: #ffffff;
   width: 100%;

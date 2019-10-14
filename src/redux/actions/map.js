@@ -3,6 +3,7 @@ import {
   SET_FILTERED_STATIONS,
   SET_NEARBY_STATIONS,
   SET_STATION_DETAIL,
+  SET_NEARBY_STATION_DETAIL,
   SET_MARKERS,
   SET_SERVICE_INFORMATION,
   SET_TIME_UPDATED,
@@ -81,7 +82,6 @@ export const setServiceInformation = () => dispatch => {
 
 }
 
-
 export const setFilteredStations = new_stations => dispatch => {  
   dispatch({
     type: SET_FILTERED_STATIONS,
@@ -102,6 +102,14 @@ export const setStationDetail = detail => dispatch => {
     payload: detail
   })
 }
+
+export const setNearbyStationDetail = detail => dispatch => {  
+  dispatch({
+    type: SET_NEARBY_STATION_DETAIL,
+    payload: detail
+  })
+}
+
 export const setMarkers = markers => dispatch => {  
   dispatch({
     type: SET_MARKERS,
@@ -123,97 +131,6 @@ export const setUserCoordinates = (lat, lon) => dispatch => {
     payload: [lat, lon]
   })
 }
-
-
-
-/* 
-export const setTimeUpdated = time_updated => dispatch => {  
-  dispatch({
-    type: SET_TIME_UPDATED,
-    payload: time_updated
-  })
-} */
-
-
-/* 
-
-fetchService = async () => {
-  // Get information about subway stations
-  //const service_info = await fetch('https://collector-otp-prod.camsys-apps.com/realtime/serviceStatus?apikey=qeqy84JE7hUKfaI0Lxm2Ttcm6ZA0bYrP')
-  //const data = await service_info.json()
-  //const last_updated = data.lastUpdated
-  //const {routeDetails} = data
-  //console.log('!!!', routeDetails)
-  const filtered_service_info = serviceInfo.routeDetails.filter(element => element.mode === 'subway')
-
-  // convert service info into a js object
-  const filtered_service_info_obj = {}
-
-  filtered_service_info.forEach(station => {
-    let station_name = station.route.toLowerCase()
-    const status_details = station.statusDetails
-    if (station_name.length > 1 && station_name !== 'sir') {
-      station_name = `${station_name[0]} Express`
-    }
-
-    station = {
-      route: station_name,
-      status: status_details
-    }
-
-    filtered_service_info_obj[station_name] = station
-
-  })
-
-  // Get timestamp of when the status data was last updated
-  let time_updated = serviceInfo.lastUpdated.split('T')[1]
-  time_updated = time_updated.split('-')[0]
-  time_updated = time_updated.split(':')
-  
-  // Assign AM or PM
-  let time = ''
-
-  if (time_updated[0] >= 12) {
-    time = 'PM'
-  } else {
-    time = 'AM'
-  }
-
-  // Final timestamp
-  time_updated = `${time_updated[0] % 12}:${time_updated[1]}:${time_updated[2]} ${time}`
-
-  this.setState({
-    serviceInfo: filtered_service_info_obj, 
-    timeUpdated: time_updated
-  })
-
-}
-
-
- */
-
-
-
-
-
-
-/* 
-export const setServiceInformation = service_information => dispatch => {  
-  dispatch({
-    type: SET_SERVICE_INFORMATION,
-    payload: service_information
-  })
-}
-
-export const setTimeUpdated = time_updated => dispatch => {  
-  dispatch({
-    type: SET_TIME_UPDATED,
-    payload: time_updated
-  })
-}
-
- */
-
 
 
 
