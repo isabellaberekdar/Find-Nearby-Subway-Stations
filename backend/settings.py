@@ -132,7 +132,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'build', 'media')
 
 
 # Geolocation retrieval requires url to start with https://, so force redirect
-'''
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') 
-'''
