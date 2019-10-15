@@ -14,7 +14,7 @@ SECRET_KEY = 'v+p%95q+6uet$od!emc^6j=8=&fxgz*zuv17=$c1$@5c%n!z66'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['findnearbysubwaystations2.herokuapp.com']
 
 
 # Application definition
@@ -120,11 +120,14 @@ USE_TZ = True
 django_heroku.settings(locals())
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'static')
+
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.Gzip.GzipManifestStaticFilesStorage'
+
 STATICFILES_DIRS = []
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'build', 'media')
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
