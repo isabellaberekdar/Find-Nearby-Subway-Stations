@@ -1,11 +1,12 @@
 import React from 'react'
+import FavoritesStatus from '../components/FavoritesStatus/FavoritesStatus'
+
 import { connect } from 'react-redux'
-import { Link, Redirect } from 'react-router-dom'
-import { login } from '../redux/actions/auth'
+import { Redirect } from 'react-router-dom'
 import { addFavorite, deleteFavorite } from '../redux/actions/favorites'
 import './Favorites.css'
 import { getIcon, AssignIcons } from '../functions/SubwayIcon'
-import { get_train } from '../functions/getId'
+import { get_train, get_id } from '../functions/getId'
 
 class Favorites extends React.Component {
     
@@ -15,38 +16,29 @@ class Favorites extends React.Component {
             return <Redirect to='/' />
         } 
 
+        const lines = this.props.favorites.map(line => get_train[line].name)
+
         return (
           <div className='FavoritesContainer'>
               <div className='Favorites'>
-                <h1>Your Favorite Lines</h1>
-                {this.props.favorites.length === 0 ?
+                <h1>Favorite Lines</h1>
+                  {this.props.favorites.length === 0 ?
                     (<p>You haven't favorited any lines yet. Search for a station on the homepage or find stations near you to add some.</p>)
                 :
-                this.props.favorites.map(line => {
-                  const line_name = get_train[line].name
-                  const line_status = this.props.serviceInfo[line_name].statusDetails
-                  console.log(typeof line_name, line_name)
-                  if (line_status !== undefined) {
-                    return (
-                      <div className='ServiceInfo'>
-                        { getIcon(line_name) }
-                        <h3 style={{'color':'rgb(255, 73, 73)'}}>PLANNED WORK</h3>                
-                      </div>
-                    )
-                  }
-                  else {
-                    return (
-                      <div className='ServiceInfo'>
-                        { getIcon(line_name)}
-                        <h3 style={{'color':'rgb(94, 187, 148)'}}>GOOD SERVICE</h3>               
-                      </div>
-                    )
-                  }
-                })
+                  lines.map(line => (
+                    <FavoritesStatus 
+                      icon={getIcon(line)}
+                      class={this.props.favorites.includes(get_id[line].id) ? "far fa-times-circle fa-2x" : "fas fa-times-circle fa-2x"}
+                      statusDetails={this.props.serviceInfo[line].statusDetails}
+                      AddOrDeleteFavorite={this.props.favorites.includes(get_id[line].id) ? this.props.deleteFavorite : this.props.addFavorite}
+                      AddOrDelete={this.props.favorites.includes(get_id[line].id) ? 'Delete' : 'Add'}
+                      line={line}
+                    />
+                  ))
               }
               </div>
             </div>
-        )  
+        )
     }
 }
 /* 

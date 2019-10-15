@@ -2,34 +2,36 @@
     padding-top: 0em;
     padding-bottom: 0em;
     display: flex;    
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
     align-content: center;
     background-color: #ffffff;
-    box-shadow: 15px 15px rgb(199, 156, 170);
-    width: 50em;
-    height: 60em;
     margin-top: 7em;
+    
 }
 
 .Favorites {
     display: flex;    
-    flex-direction: column;
+    flex-direction: row;
     width: 50%;
+    margin-left: 0vw;
+
     padding: 2em; 
     align-items: center;
 }
 
 .Favorites h1 {
-    font-size: 2em;
+    font-size: 4em;
     font-style: italic;
+    margin-right: 7vw;
+    margin-left: 12vw;
+
     letter-spacing: 0.07em;
 }
 
 .Favorites label {
     font-size: 1.4em;
     margin-top: 1em;
-
 }
 
 .ServiceInfo img {

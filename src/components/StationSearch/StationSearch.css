@@ -10,6 +10,8 @@
   background-color: #ffffff;
   padding:.5em;
   border: .2em solid rgb(255, 255, 255);
+  border-bottom: .1em solid rgb(233, 233, 233);
+
   align-items: center;
   width: 100%;
 }

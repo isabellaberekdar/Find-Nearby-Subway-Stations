@@ -40,3 +40,19 @@ html, body {
   background-size: cover; 
   
 }
+
+
+.ChangeMode { 
+  width: 39vw;
+  height: 2em;
+  color: black;
+  background-color: rgb(236, 220, 130);
+  border: .15em solid transparent;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.ChangeMode:hover {
+background-color: rgb(199, 156, 170);
+border: .15em solid transparent;
+}

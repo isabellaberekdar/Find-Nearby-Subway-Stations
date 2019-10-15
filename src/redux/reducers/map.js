@@ -3,10 +3,14 @@ import {
     SET_FILTERED_STATIONS,
     SET_NEARBY_STATIONS,
     SET_STATION_DETAIL,
+    SET_NEARBY_STATION_DETAIL,
     SET_MARKERS,
+    SET_NEARBY_MARKERS,
+    SET_DETAIL_MARKER,
     SET_SERVICE_INFORMATION,
     SET_TIME_UPDATED, 
     HANDLE_STATION_CLICK,
+    HANDLE_NEARBY_STATION_CLICK,
     SET_USER_COORDINATES
 } from '../actions/types'
 
@@ -32,9 +36,13 @@ const initialState = {
         notes: 'unknown'
     },       
     markers: null,                  // the group of markers currently being displayed on the map
+    detail_marker: null,
+    nearby_markers: null,
+    
     service_information: null,      // information about current subway service
     time_updated: null,             // timestamp of when the subway service information was updated by the mta
     user_coordinates: null,  // the user's coordinates, given when they push the button
+
 }
 
 const subwayReducer = (state = initialState, action) => {
@@ -58,6 +66,12 @@ const subwayReducer = (state = initialState, action) => {
                 ...state,
                 nearby_stations: action.payload
             }
+        
+        case SET_NEARBY_STATION_DETAIL:
+            return {
+                ...state,
+                nearby_station_detail: action.payload
+        }
 
         case SET_STATION_DETAIL:
             return {
@@ -69,8 +83,20 @@ const subwayReducer = (state = initialState, action) => {
             return {
                 ...state,
                 markers: action.payload
-            }     
-
+            } 
+            
+        case SET_DETAIL_MARKER:
+                return {
+                    ...state,
+                    detail_marker: action.payload
+                } 
+                
+        case SET_NEARBY_MARKERS:
+            return {
+                ...state,
+                nearby_markers: action.payload
+            } 
+            
         case SET_SERVICE_INFORMATION:
             return {
                 ...state,
@@ -88,6 +114,13 @@ const subwayReducer = (state = initialState, action) => {
                 ...state,
                 station_detail: action.payload
             }
+
+        case HANDLE_NEARBY_STATION_CLICK:
+            return {
+                ...state,
+                nearby_station_detail: action.payload
+            }
+
         case SET_USER_COORDINATES:
             return {
                 ...state,
