@@ -24,16 +24,15 @@ export const loadUser = () => (dispatch, getState) => {
     .catch(err => console.log(err))
 }
 
-// LOGIN USER
 export const login = (username, password) => dispatch => {
-  // Headers
+
   const config = {
     headers: {
       "Content-Type": "application/json"
     }
   }
 
-  // Request Body
+  
   const body = JSON.stringify({ username, password })
   
   axios
@@ -49,7 +48,7 @@ export const login = (username, password) => dispatch => {
 }
 
 export const register = ({ username, password, email }) => dispatch => {
-  // Headers
+
   const config = {
     headers: {
       "Content-Type": "application/json"
@@ -72,7 +71,6 @@ export const register = ({ username, password, email }) => dispatch => {
 }
 
 
-// LOGOUT USER
 export const logout = () => (dispatch, getState) => {
   axios
     .post("/api/auth/logout/", null, tokenConfig(getState))

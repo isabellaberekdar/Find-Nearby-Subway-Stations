@@ -1,4 +1,3 @@
-/*
 export const get_id = {
     1: {
         id: 1,
@@ -172,9 +171,9 @@ export const get_train = {
         name: 'f express',
     }
 }
-*/
-/* web */
 
+/* web */
+/*
 export const get_id = {
     1: {
         id: 28,
@@ -348,3 +347,4 @@ export const get_train = {
         name: '1',
     }
 }
+*/

@@ -15,11 +15,10 @@ import {
 } from './types'
 
 import processStation from '../../functions/ProcessStation'
-import serviceInfo from '../../service' 
+//import serviceInfo from '../../service' 
 
 // Fetches the list of all subway stations in NYC from NYC Open Data.
-export const setAllStations = () => dispatch => {  
-  const url = 'https://data.cityofnewyork.us/api/views/kk4q-3rt2/rows.json'
+export const setAllStations = () => dispatch => {
   fetch('https://data.cityofnewyork.us/api/views/kk4q-3rt2/rows.json')
     .then(res => res.json())
     .then(json => {
@@ -33,55 +32,62 @@ export const setAllStations = () => dispatch => {
 
 
 export const setServiceInformation = () => dispatch => {  
-  const filtered_service_info = serviceInfo.routeDetails.filter(element => element.mode === 'subway')
+  const url = 'https://collector-otp-prod.camsys-apps.com/realtime/serviceStatus?apikey=qeqy84JE7hUKfaI0Lxm2Ttcm6ZA0bYrP'
 
-  const filtered_service_info_obj = {}
-
-  filtered_service_info.forEach(station => {
-    let station_name = station.route.toLowerCase()
-
-    const status_details = station.statusDetails
-    const in_service = station.inService
-    if (station_name.length > 1 && station_name !== 'sir') {
-      station_name = `${station_name[0]} express`
-    }
-
-    station = {
-      route: station_name,
-      statusDetails: status_details,
-      in_service: in_service
-    }
-
-    filtered_service_info_obj[station_name] = station
-
-  })
-
-  // Get timestamp of when the status data was last updated
-  let time_updated = serviceInfo.lastUpdated.split('T')[1]
-  time_updated = time_updated.split('-')[0]
-  time_updated = time_updated.split(':')
+  fetch(url)
+  .then(res => res.json())
+  .then(serviceInfo => {
+    const filtered_service_info = serviceInfo.routeDetails.filter(element => element.mode === 'subway')
   
-  // Assign AM or PM
-  let time = ''
-
-  if (time_updated[0] >= 12) {
-    time = 'PM'
-  } else {
-    time = 'AM'
-  }
-
-  // Final timestamp
-  time_updated = `${time_updated[0] % 12}:${time_updated[1]}:${time_updated[2]} ${time}`
+    const filtered_service_info_obj = {}
   
-  dispatch({
-    type: SET_TIME_UPDATED,
-    payload: time_updated
-  })
+    filtered_service_info.forEach(station => {
+      let station_name = station.route.toLowerCase()
+  
+      const status_details = station.statusDetails
+      const in_service = station.inService
+      if (station_name.length > 1 && station_name !== 'sir') {
+        station_name = `${station_name[0]} express`
+      }
+  
+      station = {
+        route: station_name,
+        statusDetails: status_details,
+        in_service: in_service
+      }
+  
+      filtered_service_info_obj[station_name] = station
+  
+    })
+  
+    // Get timestamp of when the status data was last updated
+    let time_updated = serviceInfo.lastUpdated.split('T')[1]
+    time_updated = time_updated.split('-')[0]
+    time_updated = time_updated.split(':')
+    
+    // Assign AM or PM
+    let time = ''
+  
+    if (time_updated[0] >= 12) {
+      time = 'PM'
+    } else {
+      time = 'AM'
+    }
+  
+    // Final timestamp
+    time_updated = `${time_updated[0] % 12}:${time_updated[1]}:${time_updated[2]} ${time}`
+    
+    dispatch({
+      type: SET_TIME_UPDATED,
+      payload: time_updated
+    })
+  
+    dispatch({
+      type: SET_SERVICE_INFORMATION,
+      payload: filtered_service_info_obj
+    })
+})
 
-  dispatch({
-    type: SET_SERVICE_INFORMATION,
-    payload: filtered_service_info_obj
-  })
 
 }
 

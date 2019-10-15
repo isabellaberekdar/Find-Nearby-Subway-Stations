@@ -146,7 +146,7 @@ class NearbyStations extends React.Component {
                                 <div className='NearbyStationsList'>
                                     {this.props.nearbyStations.map(station => 
                                         <Station 
-                                            key={station} 
+                                            key={`${station.name} ${station.trains_list}`} 
                                             stationInfo={station} 
                                             serviceInfo={this.props.serviceInfo} 
                                             handleStationClick={() => this.click(station)}
@@ -156,17 +156,17 @@ class NearbyStations extends React.Component {
                             )
                         :   
                             (
-                                <div>
-                                    <div onClick={() => this.showList(false)}>
-
-                                    </div>
+                                <div className='DetailContainer'>
                                     <StationDetail 
                                         station={this.props.nearbyStationDetail}
                                         serviceInfo={this.props.serviceInfo}
                                         timeUpdated={this.props.timeUpdated}
                                         showDetail={this.props.nearbyStationDetail.name !== 'unknown'}
-                                    
                                     />
+                                    <div class='Back' onClick={() => this.showList(true)}>
+                                        <i class="fas fa-arrow-alt-circle-left fa-2x"></i>
+                                        <p>Back to list</p>
+                                    </div>
                                 </div>
                             )
                     }
@@ -178,11 +178,7 @@ class NearbyStations extends React.Component {
  
 NearbyStations.propTypes = {
   showButton: PropTypes.bool.isRequired,
-  //markers
-  //nearbyStationDetail:
-  //serviceInfo
-  //
-  //find_stations = PropTypes.func.isRequired
+
 } 
 
 const mapStateToProps = state => ({

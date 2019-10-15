@@ -3,21 +3,21 @@
     flex-direction: column;
 }
 
-
 .LineStatus {
+    margin-top: 2em;
     font-size: .7em;
-
     justify-content: center;
     align-content: center;
     text-align: center;
-vertical-align: middle;
+    vertical-align: middle;
+    letter-spacing: .25em;
 }
 
 .LineStatus img{
     margin-bottom: .2em;
     margin-right: 2em;
     margin-left: 2em;
-    height: 7em;
-    width: 7em;text-align: center;
+    height: 5em;
+    width: 5em;text-align: center;
     vertical-align: middle;
 }

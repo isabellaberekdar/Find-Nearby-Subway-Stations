@@ -20,7 +20,7 @@ class StationDetail extends React.Component {
       <div className='stationDetail'>
         <div className='StationName'>
           <h1>{this.props.station.name}</h1>
-          {this.props.station.train_icons}
+         {/*  {this.props.station.train_icons} */}
           {this.props.station.trains}
         </div>
         <div className='DetailLineList'>

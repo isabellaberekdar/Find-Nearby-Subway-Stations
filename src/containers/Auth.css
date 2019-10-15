@@ -5,11 +5,15 @@
     justify-content: center;
     text-align: center;
     align-content: center;
-    background-color: #ffffff;
     box-shadow: 15px 15px rgb(236, 220, 130);
+    background-color: rgb(241, 241, 241);
     width: 50em;
     height: 40em;
     margin-top: 10em;
+}
+
+.FormContainer:hover {
+    box-shadow: 20px 20px rgb(236, 220, 130);
 }
 
 .Form {
@@ -17,6 +21,7 @@
     flex-direction: column;
     width: 50%;
     padding: 2em;
+    font-size: 1em;
     align-items: center;
 }
 
@@ -29,7 +34,6 @@
 .Form label {
     font-size: 1.4em;
     margin-top: 1em;
-
 }
 
 .Form button {
@@ -45,6 +49,10 @@
     font-weight: 600;
 }
 
+.Form button:hover {
+    background-color: rgb(224, 199, 116);
+}
+
 .Form input {
     padding: .5em;
     margin: .6em;
@@ -53,11 +61,9 @@
     border-color: rgb(43, 43, 43)
 }
 
-
-
-
-
-
+.Form input:hover {
+    box-shadow: 3px 3px rgb(236, 220, 130);
+}
 
 
 .RegistrationFormContainer {
@@ -67,18 +73,23 @@
     justify-content: center;
     text-align: center;
     align-content: center;
-    background-color: #ffffff;
     box-shadow: 15px 15px rgb(134, 194, 194);
     width: 50em;
     height: 100%;
     margin-top: 10em;
+    background-color: rgb(241, 241, 241);
 }
 .RegistrationForm {
+    
     display: flex;    
     flex-direction: column;
     width: 50%;
     padding: 2em;
     align-items: center;
+}
+
+.RegistrationFormContainer:hover {
+    box-shadow: 20px 20px rgb(134, 194, 194);
 }
 
 .RegistrationForm h1 {
@@ -107,6 +118,14 @@
     font-size: 1.2em;
     box-shadow: 2px 2px rgb(134, 194, 194);
     border-color: rgb(43, 43, 43)
+}
+
+.RegistrationForm button:hover {
+    background-color: rgb(95, 148, 148);;
+}
+
+.RegistrationForm input:hover {
+    box-shadow: 3px 3px rgb(134, 194, 194);
 }
 
 .RegistrationForm label {

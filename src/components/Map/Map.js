@@ -105,7 +105,6 @@ class Map extends React.Component {
         return (
             <div className='MapContainer'>
                 <div id="map" className='Map'></div>
-                <button id='location-button' onClick={() => this.setMap()}>Find Nearby Stations</button>
           </div>
         )
     }
