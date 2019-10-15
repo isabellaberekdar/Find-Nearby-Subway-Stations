@@ -120,8 +120,6 @@ USE_TZ = True
 django_heroku.settings(locals())
 
 STATIC_URL = '/static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'static')
 
@@ -131,3 +129,8 @@ STATICFILES_DIRS = []
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'build', 'media')
+
+
+# Geolocation retrieval requires url to start with https://, so force redirect
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
