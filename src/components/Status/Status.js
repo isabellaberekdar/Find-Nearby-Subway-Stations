@@ -6,22 +6,17 @@ import {get_id} from '../../functions/getId'
 import LineStatus from './LineStatus'
 
 const Status = props => {
-
-    const handleClick = line_id => {
-        console.log(line_id, typeof line_id)
-        console.log(props.favorites)
-        console.log(props.favorites.includes(line_id))
-    }
-
   return (
       <div className='Service'>
           {props.linesList.map(line => (
             <LineStatus 
               icon={getIcon(line)}
-              class={props.favorites.includes(get_id[line].id) ? "fas fa-heart" : "far fa-heart"}
+              class={props.favorites.includes(get_id[line].id) ? "fas fa-star fa-2x" : "far fa-star fa-2x"}
               statusDetails={props.serviceInfo[line].statusDetails}
               AddOrDeleteFavorite={props.favorites.includes(get_id[line].id) ? props.deleteFavorite : props.addFavorite}
+              AddOrDelete={props.favorites.includes(get_id[line].id) ? 'Delete' : 'Add'}
               line={line}
+              
             />
           ))}
       </div>

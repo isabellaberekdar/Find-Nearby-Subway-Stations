@@ -5,10 +5,13 @@ import {
   SET_STATION_DETAIL,
   SET_NEARBY_STATION_DETAIL,
   SET_MARKERS,
+  SET_NEARBY_MARKERS,
+  SET_DETAIL_MARKER,
   SET_SERVICE_INFORMATION,
   SET_TIME_UPDATED,
   HANDLE_STATION_CLICK,
-  SET_USER_COORDINATES
+  SET_USER_COORDINATES,
+  HANDLE_NEARBY_STATION_CLICK,
 } from './types'
 
 import processStation from '../../functions/ProcessStation'
@@ -82,6 +85,13 @@ export const setServiceInformation = () => dispatch => {
 
 }
 
+
+
+const nearby = (position, lat_or_lon) => {
+  return ((Math.abs(position - lat_or_lon)) < 0.011)
+}     
+
+
 export const setFilteredStations = new_stations => dispatch => {  
   dispatch({
     type: SET_FILTERED_STATIONS,
@@ -117,10 +127,30 @@ export const setMarkers = markers => dispatch => {
   })
 }
 
+export const setNearbyMarkers = markers => dispatch => {  
+  dispatch({
+    type: SET_NEARBY_MARKERS,
+    payload: markers
+  })
+}
 
-export const handleStationClick = event => dispatch => {
+export const setDetailMarker = markers => dispatch => {  
+  dispatch({
+    type: SET_DETAIL_MARKER,
+    payload: markers
+  })
+}
+
+export const handleStationClick = station => dispatch => {
   dispatch({
     type: HANDLE_STATION_CLICK,
+    payload: station
+  })
+}
+
+export const handleNearbyStationClick = event => dispatch => {
+  dispatch({
+    type: HANDLE_NEARBY_STATION_CLICK,
     payload: event
   })
 }

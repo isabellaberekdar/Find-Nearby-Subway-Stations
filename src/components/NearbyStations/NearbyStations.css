@@ -1,0 +1,47 @@
+.NearbyStationsList {
+    width: 37.5vw;
+    height: 86vh; 
+    max-height: 90vh; 
+
+    overflow: auto;
+    background-color: #ffffff;
+}
+  
+.NearbyStationsList p {
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1rem;
+}
+
+.NearbyStationsList img {
+
+}
+
+.LineService {
+}
+
+.ButtonContainer {
+    display: flex;
+    justify-content: center;
+    width: 39vw;
+    height: 90vh;
+}
+
+.ButtonContainer button { 
+    margin-top: 2.2em;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border: 1em solid rgb(236, 220, 130);
+    border-radius: .25em;
+    
+    padding-top: .9em;
+    padding-bottom: .9em;
+    
+    font-size: 1.1em;
+    font-weight: 600;
+    }
+    
+.ButtonContainer button:hover {
+    background-color: rgb(236, 220, 130);
+    border: .15em solid transparent;
+}
