@@ -1,9 +1,14 @@
 .Service {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 30vh;
 }
 
 .LineStatus {
+    margin: 2em;
     margin-top: 2em;
     font-size: .7em;
     justify-content: center;
@@ -11,6 +16,7 @@
     text-align: center;
     vertical-align: middle;
     letter-spacing: .25em;
+    background-color: rgb(145, 140, 149)42, 149);
 }
 
 .LineStatus img{
@@ -20,4 +26,48 @@
     height: 5em;
     width: 5em;text-align: center;
     vertical-align: middle;
+}
+/* 
+.LineStatusDetail {
+    position: absolute;
+    overflow: auto;
+    padding: 2em;
+    font-size: 1.2em;
+    min-height: 95vh;
+    width: 50vw;
+    left: 3vw;
+    top: 4.9vh;
+    background-color: rgb(255, 255, 255);
+    border-color: darkcyan;
+    letter-spacing: 0;
+    z-index: 1000
+
+}  */
+
+.LineStatusDetail {
+    position: absolute;
+    overflow: auto;
+    padding: 4em;
+    padding-left: 4em;
+    padding-right: 4em;
+    font-size: 1.4em;
+    max-height: 30vh;
+    max-width: 32vw;
+    min-width: 32vw;
+    right: 1.5vw;
+    top: 58vh;
+    background-color: rgb(248, 248, 248);
+    border-radius: 1em;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 3em;
+    letter-spacing: 0;
+    z-index: 1000;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-box-shadow: 2px 3px 17px 4px rgba(171,171,171,0.58);
+    -moz-box-shadow: 2px 3px 17px 4px rgba(171,171,171,0.58);
+    box-shadow: 2px 3px 17px 4px rgba(171,171,171,0.58);
 }

@@ -60,7 +60,7 @@
 }
 
 .Back {
-    margin-top: 2em;
+    margin-top: 25vh;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -68,7 +68,7 @@
     padding-right: 1.75em;
     color: rgb(37, 37, 37);
     border-radius: 1em;
-    background-color: rgb(221, 236, 236);
+    background-color: rgb(216, 226, 230);
 }
 
 .Back p {

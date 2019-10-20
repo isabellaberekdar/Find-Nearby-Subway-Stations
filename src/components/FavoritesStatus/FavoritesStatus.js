@@ -9,7 +9,7 @@ class FavoritesStatus extends React.Component {
     constructor(props) {
         super(props)
 
-         let hoverClass;
+        let hoverClass;
         if (this.props.class === 'fas fa-times-circle fa-2x') {
             hoverClass = 'far fa-times-circle fa-2x'
         } else {
@@ -29,6 +29,7 @@ class FavoritesStatus extends React.Component {
     }
 
     render() {
+        let lineStatus = {}
         return (
             
             <div className='FavoritesStatus'>
@@ -50,6 +51,25 @@ class FavoritesStatus extends React.Component {
                         : 
                             <h3 style={{'color':'rgb(94, 187, 148)'}}>GOOD SERVICE</h3>
                     }
+
+                    {this.state.hover && this.props.statusDetails ? 
+                    (
+                        <div className='FavoritesLineStatusDetail'>
+{/*                             {this.props.statusDetails.map(status => <div dangerouslySetInnerHTML={{ __html: status.statusDescription }} />)}
+ */}                            {/* Filter out duplicate status updates */
+                                this.props.statusDetails.forEach(status => {
+                                    lineStatus[status.statusSummary] = (<div dangerouslySetInnerHTML={{ __html: status.statusDescription }} />)
+                                })
+                            }
+                            {Object.keys(lineStatus).map(key => 
+                               lineStatus[key]
+                            )}
+                         </div>
+                      
+                    )
+                :
+                    null
+            }
                 </div>
             </div>
         )

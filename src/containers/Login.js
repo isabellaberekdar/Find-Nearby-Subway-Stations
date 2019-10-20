@@ -4,7 +4,6 @@ import { Link, Redirect } from 'react-router-dom'
 import { login } from '../redux/actions/auth'
 import { loadFavorites } from '../redux/actions/favorites'
 import './Auth.css'
-// proptypes...
 
 class Login extends React.Component {
     state = {

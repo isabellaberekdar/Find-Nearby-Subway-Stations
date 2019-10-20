@@ -16,7 +16,6 @@ const Status = props => {
               AddOrDeleteFavorite={props.favorites.includes(get_id[line].id) ? props.deleteFavorite : props.addFavorite}
               AddOrDelete={props.favorites.includes(get_id[line].id) ? 'Delete' : 'Add'}
               line={line}
-              
             />
           ))}
       </div>

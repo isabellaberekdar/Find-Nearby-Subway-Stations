@@ -8,19 +8,16 @@ import './StationDetail.css'
 
 
 class StationDetail extends React.Component {
-
   render() {
     if (this.props.showDetail) {
       if (this.props.toggleMap) {
         this.props.toggleMap('detail')
       }
         
-
       return (
       <div className='stationDetail'>
         <div className='StationName'>
-          <h1>{this.props.station.name}</h1>
-         {/*  {this.props.station.train_icons} */}
+          <h1><mark>{this.props.station.name}</mark></h1>
           {this.props.station.trains}
         </div>
         <div className='DetailLineList'>
@@ -34,17 +31,22 @@ class StationDetail extends React.Component {
           }
           
           <div className='LineService'>
-            <h2>Line Service:</h2>
+            <h2><mark>Line Service:</mark></h2>
+            <p>{`Updated at ${this.props.timeUpdated}`}</p>
             <Status 
               linesList={this.props.station.trains_list} 
               serviceInfo={this.props.serviceInfo} 
               addFavorite={this.props.addFavorite}
               deleteFavorite={this.props.deleteFavorite}
               favorites={this.props.favorites}
+
             />
+      
+
+    
+            
           </div>
 
-          <p>{`Updated at ${this.props.timeUpdated}`}</p>
       </div>
     )} 
     else {

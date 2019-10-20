@@ -25,16 +25,38 @@
 .LineService {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+}
+.LineService h2 {
+  font-style: italic;
+}
+
+.LineService mark {
+  padding: .3em;
+  padding-left: .75em;
+  padding-right: .75em;
+  background-color: rgb(216, 226, 230);
+  color: rgb(0, 0, 0);
+
 }
 
 .StationName {
-  background-color: rgb(241, 241, 241);
+  background-color: rgb(44, 44, 44);
   margin-bottom: 1em;
   padding: .8vh;
   letter-spacing: .15em;
   color: rgb(0, 0, 0);
   font-size: .8em;
+  font-style: italic;
+}
+
+.StationName mark {
+  background-color: rgb(237, 237, 241);
+  padding: .3em;
+  padding-left: .75em;
+  padding-right: .75em;
+  opacity: .98;
+
 }
 
 .ServiceInfo {
