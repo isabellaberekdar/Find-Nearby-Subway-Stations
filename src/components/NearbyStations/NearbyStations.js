@@ -15,9 +15,6 @@ import { setUserCoordinates,
 import './NearbyStations.css'
 
 import L from 'leaflet';
-import yellow_icon from 'leaflet/dist/images/marker-icon.png';
-import icon from '../../icons/marker.png'
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import 'leaflet/dist/leaflet.css';
 
 class NearbyStations extends React.Component {
@@ -39,11 +36,7 @@ class NearbyStations extends React.Component {
       this.props.setNearbyStationDetail(reset)
     }
 
-    componentWillUnmount() {
-        console.log('unmounted nearby') 
-        // remove layer group from map
-/*         this.props.nearby_markers.
- */    }
+
     state = {
         showList: true
     }
@@ -131,7 +124,6 @@ class NearbyStations extends React.Component {
         this.props.handleNearbyStationClick(station)
     }
     render() {
-        console.log(this.props.nearbyStationDetail)
         if (this.props.showButton) {
             return (
                 <div className='ButtonContainer'>

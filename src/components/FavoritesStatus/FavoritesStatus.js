@@ -24,7 +24,6 @@ class FavoritesStatus extends React.Component {
 
 
     toggleHover = () => {
-        console.log('hovering')
         this.setState({ hover: !this.state.hover })
     }
 

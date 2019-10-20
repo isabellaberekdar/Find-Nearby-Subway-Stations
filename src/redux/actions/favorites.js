@@ -43,11 +43,7 @@ export const getFavorites = () => (dispatch, getState) => {
     } */
     axios.get('/api/favoriteLines/', tokenConfig(getState))
         .then(res => {
-            //console.log(res.data[0])
             let { lines, id } = res.data[0]
-            
-            //lines = lines.map(element => element.name)
-            //const id = user.id
 
             dispatch({
                 type: GET_FAVORITES,
@@ -73,7 +69,6 @@ export const deleteFavorite = line_to_delete => (dispatch, getState) => {
         "lines": favorites
     }
 
-    console.log(new_favorites)
     // If user has no favorites yet
     if (id === null) {
         console.log('Error: unknown user')
@@ -82,10 +77,8 @@ export const deleteFavorite = line_to_delete => (dispatch, getState) => {
     else {
         // User still has favorites left after deleting
         if (favorites.length > 0) {
-            console.log("PATCH ", id)
             axios.patch(`/api/favoriteLines/${id}/`, new_favorites, tokenConfig(getState))
             .then(res => {
-                console.log(res.data)
                 dispatch({
                     type: REMOVE_FAVORITE,
                     payload: res.data
@@ -95,7 +88,6 @@ export const deleteFavorite = line_to_delete => (dispatch, getState) => {
     
         // Removed last favorite; delete item from database
         else {
-            console.log("DELETE ", id)
             axios.delete(`/api/favoriteLines/${id}/`, tokenConfig(getState))
             .then(res => {
                 dispatch({
@@ -118,7 +110,6 @@ export const addFavorite = line_to_add => (dispatch, getState) => {
         "lines": favorites
     }
     
-    console.log(new_favorites)
     // If user has no favorites yet
     if (id === null) {
         console.log("POST ", id)
@@ -135,7 +126,6 @@ export const addFavorite = line_to_add => (dispatch, getState) => {
 
     // User has favorites; replace old lines with new lines
     else {
-        console.log("PATCH ", id)
         axios.patch(`/api/favoriteLines/${id}/`, new_favorites, tokenConfig(getState))
         .then(res => {
             dispatch({
@@ -171,7 +161,6 @@ export const loadFavorites = () => dispatch => {
             })
             })
             .catch(err => {
-            //  console.log(err)
                 dispatch({
                     type: FAVORITES_LOADING_ERROR,
                 })
