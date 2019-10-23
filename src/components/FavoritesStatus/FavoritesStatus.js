@@ -35,17 +35,6 @@ class FavoritesStatus extends React.Component {
                     onMouseEnter={this.toggleHover}
                     onMouseLeave={this.toggleHover}
                 >
-                    {this.state.hover ? (
-                        <i
-                            className={this.state.hoverClass}
-                            style={{ color: "red" }}
-                        ></i>
-                    ) : (
-                        <i
-                            className={this.props.class}
-                            style={{ color: "red" }}
-                        ></i>
-                    )}
 
                     {this.props.icon}
                     {this.props.statusDetails ? (
@@ -76,6 +65,19 @@ class FavoritesStatus extends React.Component {
                             )}
                         </div>
                     ) : null}
+
+                    {this.state.hover ? (
+                        <i
+                            className={this.state.hoverClass}
+                            style={{ color: "red" }}
+                        ></i>
+                    ) : (
+                        <i
+                            className={this.props.class}
+                            style={{ color: "red" }}
+                        ></i>
+                    )}      
+
                 </div>
             </div>
         );
