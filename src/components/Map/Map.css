@@ -1,11 +1,11 @@
-.MapContainer {  
-  float: left;
+.MapContainer {
+    float: left;
 }
 
 .Map {
-  height: 95vh; 
-  width: 60vw;
+    height: 95vh;
+    width: 60vw;
 }
 .marker {
-  font-size: 1rem;
+    font-size: 1rem;
 }

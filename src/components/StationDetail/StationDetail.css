@@ -8,6 +8,7 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 .DetailStations {
   display: flex;
   flex-direction: row;
@@ -55,8 +56,6 @@
   padding: .3em;
   padding-left: .75em;
   padding-right: .75em;
-  opacity: .98;
-
 }
 
 .ServiceInfo {

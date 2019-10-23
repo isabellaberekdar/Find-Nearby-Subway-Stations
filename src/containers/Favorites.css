@@ -1,74 +1,89 @@
 .FavoritesContainer {
-    padding-top: 0em;
-    padding-bottom: 0em;
-    display: flex;    
-    text-align: center;
-    align-content: center;
-    background-color: #ffffff;
-    margin-top: 7em;    
+  padding-top: 0em;
+  padding-bottom: 0em;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  background-color: #ffffff;
+  margin-top: 7em;
+  min-width: 100vw;
+}
+
+.FavoritesStatusContainer {
+  position: absolute;
+  top: 40vh;
+  height: 60vh;
+  min-width: 100vw;
+  width: 100vw;
+  background-color: rgb(41, 41, 41);
 }
 
 .Favorites {
-    display: flex;    
-    flex-direction: row;
-    width: 50%;
-    margin-left: 0vw;
-    padding: 2em; 
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin-left: 0vw;
+  padding: 2em;
+  align-items: center;
 }
 
 .FavoritesStatus {
-    margin: 1em;
-    padding: 1em;
-    letter-spacing: .2em;
+  margin: 1em;
+  padding: 1em;
+  letter-spacing: 0.2em;
 }
 
+
 .FavoritesStatus:hover {
-    padding: 1em;
-    background-color: rgb(240, 240, 240);
-    border-color: black solid .2em;
-    border-radius: 1em;
+  padding: 1em;
+  background-color: rgb(240, 240, 240);
+  border-color: black solid 0.2em;
+  border-radius: 1em;
 }
 
 .Favorites h1 {
-    font-size: 4em;
-    font-style: italic;
-    margin-right: 7vw;
-    margin-left: 12vw;
+  font-size: 4em;
+  font-style: italic;
+  margin-right: 7vw;
+  margin-left: 12vw;
 
-    letter-spacing: 0.07em;
+  letter-spacing: 0.07em;
+}
+
+.Favorites h4 {
+  font-size: 2em;
+  letter-spacing: .05em;
+  font-style: italic;
 }
 
 .Favorites label {
-    font-size: 1.4em;
-    margin-top: 1em;
-
+  font-size: 1.4em;
+  margin-top: 1em;
 }
 
 .ServiceInfo img {
-    margin-right: .7em;
-    width: 2em;
-    height: 2em;
+  margin-right: 0.7em;
+  width: 2em;
+  height: 2em;
 }
 
 .Favorites button {
-    padding-top: .9em;
-    padding-bottom: .9em;
-    width: 50%;
-    background-color: rgb(236, 220, 130);
-    border-color: transparent;
-    margin-top: 2em;
-    margin-bottom: 2em;
+  padding-top: 0.9em;
+  padding-bottom: 0.9em;
+  width: 50%;
+  background-color: rgb(236, 220, 130);
+  border-color: transparent;
+  margin-top: 2em;
+  margin-bottom: 2em;
 
-    font-size: 1em;
-    font-weight: 600;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 .Favorites input {
-    padding: .5em;
-    margin: .6em;
-    font-size: 1.2em;
-    box-shadow: 2px 2px rgb(236, 220, 130);
-    border-color: rgb(43, 43, 43)
+  padding: 0.5em;
+  margin: 0.6em;
+  font-size: 1.2em;
+  box-shadow: 2px 2px rgb(236, 220, 130);
+  border-color: rgb(43, 43, 43);
 }
-

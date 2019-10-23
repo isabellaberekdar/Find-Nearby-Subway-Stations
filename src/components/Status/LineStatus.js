@@ -45,7 +45,7 @@ class LineStatus extends React.Component {
                 }
                 {this.state.hover && this.props.statusDetails ? 
                     (
-                        <div className='LineStatusDetail'>
+                        <div className='LineStatusDetail' style={this.props.popupHeight}>
 {/*                             {this.props.statusDetails.map(status => <div dangerouslySetInnerHTML={{ __html: status.statusDescription }} />)}
  */}                            {/* Filter out duplicate status updates */
                                 this.props.statusDetails.forEach(status => {

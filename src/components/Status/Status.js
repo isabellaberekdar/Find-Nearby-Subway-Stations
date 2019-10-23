@@ -16,6 +16,7 @@ const Status = props => {
               AddOrDeleteFavorite={props.favorites.includes(get_id[line].id) ? props.deleteFavorite : props.addFavorite}
               AddOrDelete={props.favorites.includes(get_id[line].id) ? 'Delete' : 'Add'}
               line={line}
+              popupHeight={props.popupHeight}
             />
           ))}
       </div>
@@ -27,7 +28,8 @@ Status.propTypes = {
   serviceInfo: PropTypes.array.isRequired,
   addFavorite: PropTypes.func.isRequired,
   deleteFavorite: PropTypes.func.isRequired,
-  favorites: PropTypes.array.isRequired
+  favorites: PropTypes.array.isRequired,
+  popupHeight: PropTypes.object
 } 
 
 export default Status

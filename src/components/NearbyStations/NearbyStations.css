@@ -60,7 +60,7 @@
 }
 
 .Back {
-    margin-top: 25vh;
+    margin-top: 30vh;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -75,7 +75,6 @@
     margin-left: 1em;
     font-weight: 500;
 }
-
 
 .Back:hover {
     color: rgb(0, 0, 0);

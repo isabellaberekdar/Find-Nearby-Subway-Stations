@@ -1,18 +1,22 @@
 .FavoritesLineStatusDetail {
     position: absolute;
     overflow: auto;
-    padding-top: 2em;
-    font-size: 1.6em;
-    max-height: 47vh;
-    max-width: 55vw;
-    min-width: 55vw;
-    right: 15vw;
-    top: 37vh;
+    font-size: 1.1em;
+    border-bottom: solid white 2.5em;
+    min-height: 20vh;
+    max-height: 44vh;
+    max-width: 35vw;
+    min-width: 35vw;
+    right: 33vw;
+    top: 45vh;
     letter-spacing: 0;
     z-index: 1000;
     justify-content: center;
     align-content: center;
     text-align: center;
     vertical-align: middle;
-    
+    background-color: rgb(255, 255, 255);
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 0.5em;
 }

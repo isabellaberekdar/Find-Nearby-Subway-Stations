@@ -31,20 +31,16 @@ class StationDetail extends React.Component {
           }
           
           <div className='LineService'>
-            <h2><mark>Line Service:</mark></h2>
-            <p>{`Updated at ${this.props.timeUpdated}`}</p>
+            <h2><mark>{`Line Service [as of ${this.props.timeUpdated}]`}</mark></h2>
             <Status 
               linesList={this.props.station.trains_list} 
               serviceInfo={this.props.serviceInfo} 
               addFavorite={this.props.addFavorite}
               deleteFavorite={this.props.deleteFavorite}
               favorites={this.props.favorites}
-
+              popupHeight={this.props.popupHeight}
             />
-      
 
-    
-            
           </div>
 
       </div>
