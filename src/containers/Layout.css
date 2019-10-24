@@ -11,18 +11,6 @@ input::placeholder {
 
 @media only screen and (max-height: 950px) {
     .Body {
-        font-size: 0.6em;
-    }
-}
-
-@media only screen and (max-height: 800px) {
-    .Body {
-        font-size: 0.5em;
-    }
-}
-
-@media only screen and (max-height: 700px) {
-    .Body {
-        font-size: 0.45em;
+        font-size: 0.56em;
     }
 }
