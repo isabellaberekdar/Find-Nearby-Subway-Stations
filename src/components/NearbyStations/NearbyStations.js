@@ -107,10 +107,7 @@ class NearbyStations extends React.Component {
         const subway_lon = coordinates[1];
 
         // if the station is close to the user, add the station to the map
-        if (
-            this.nearby(user_lat, subway_lat) &&
-            this.nearby(user_lon, subway_lon)
-        ) {
+        if (this.nearby(user_lat, subway_lat) && this.nearby(user_lon, subway_lon)) {
             return true;
         }
         return false;
@@ -129,11 +126,8 @@ class NearbyStations extends React.Component {
     render() {
         if (this.props.showButton) {
             return (
-                <div className="ButtonContainer">
-                    <button
-                        className="NearbyStationsList"
-                        onClick={() => this.setMap()}
-                    >
+                <div className='ButtonContainer'>
+                    <button className='NearbyStationsList' onClick={() => this.setMap()}>
                         Submit location
                     </button>
                 </div>
@@ -142,20 +136,18 @@ class NearbyStations extends React.Component {
             return (
                 <div>
                     {this.state.showList ? (
-                        <div className="NearbyStationsList">
+                        <div className='NearbyStationsList'>
                             {this.props.nearbyStations.map(station => (
                                 <Station
                                     key={`${station.name} ${station.trains_list}`}
                                     stationInfo={station}
                                     serviceInfo={this.props.serviceInfo}
-                                    handleStationClick={() =>
-                                        this.click(station)
-                                    }
+                                    handleStationClick={() => this.click(station)}
                                 />
                             ))}
                         </div>
                     ) : (
-                        <div className="DetailContainer">
+                        <div className='DetailContainer'>
                             <StationDetail
                                 station={this.props.nearbyStationDetail}
                                 serviceInfo={this.props.serviceInfo}
@@ -163,11 +155,8 @@ class NearbyStations extends React.Component {
                                 showDetail={this.props.nearbyStationDetail.name !== "unknown"}
                                 popupHeight={{ top: "48vh" }}
                             />
-                            <div
-                                class="Back"
-                                onClick={() => this.showList(true)}
-                            >
-                                <i class="fas fa-arrow-alt-circle-left fa-2x"></i>
+                            <div class='Back' onClick={() => this.showList(true)}>
+                                <i class='fas fa-arrow-alt-circle-left fa-2x'></i>
                                 <p>Back to list</p>
                             </div>
                         </div>

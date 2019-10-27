@@ -1,11 +1,11 @@
 .NearbyStationsList {
     width: 39vw;
-    height: 86vh; 
-    max-height: 90vh; 
+    height: 86vh;
+    max-height: 90vh;
     overflow: auto;
     background-color: #ffffff;
 }
-  
+
 .NearbyStationsList p {
     font-size: 1.3em;
     font-weight: 300;
@@ -18,10 +18,7 @@
 }
 
 .LineService {
-
-    
 }
-
 
 .ButtonContainer {
     display: flex;
@@ -30,18 +27,18 @@
     height: 90vh;
 }
 
-.ButtonContainer button { 
+.ButtonContainer button {
     margin-top: 2.2em;
     color: black;
     width: 20em;
     height: 10em;
     background-color: rgb(255, 255, 255);
     border: 1em solid rgb(236, 220, 130);
-    border-radius: .25em;
-    
-    padding-top: .9em;
-    padding-bottom: .9em;
-    
+    border-radius: 0.25em;
+
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
+
     font-size: 1.1em;
     font-weight: 600;
 }
@@ -49,21 +46,20 @@
 .DetailContainer {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     flex-direction: column;
-    width:39vw;
-    
+    width: 39vw;
 }
 .ButtonContainer button:hover {
     background-color: rgb(236, 220, 130);
-    border: .15em solid transparent;
+    border: 0.15em solid transparent;
 }
 
 .Back {
     margin-top: 30vh;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding-left: 1.75em;
     padding-right: 1.75em;
     color: rgb(37, 37, 37);
@@ -80,5 +76,4 @@
     color: rgb(0, 0, 0);
     cursor: pointer;
     background-color: rgb(233, 240, 240);
-
 }

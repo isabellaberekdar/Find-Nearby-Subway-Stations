@@ -14,9 +14,9 @@ const Header = props => {
     if (props.isAuthenticated) {
         header_links = (
             <div>
-                <Link to="/favorites/">Favorites</Link>
+                <Link to='/favorites/'>Favorites</Link>
                 <span> | </span>
-                <Link to="/" onClick={() => logoutUser()}>
+                <Link to='/' onClick={() => logoutUser()}>
                     Log out
                 </Link>
             </div>
@@ -24,20 +24,20 @@ const Header = props => {
     } else {
         header_links = (
             <div>
-                <Link to="/login/">Log in</Link>
+                <Link to='/login/'>Log in</Link>
                 <span> | </span>
-                <Link to="/register/">Register</Link>
+                <Link to='/register/'>Register</Link>
             </div>
         );
     }
 
     return (
-        <div className="HeaderContainer">
-            <div className="HeaderItems">
-                <div className="HeaderMiddle">
-                    <Link to="/">{props.title}</Link>
+        <div className='HeaderContainer'>
+            <div className='HeaderItems'>
+                <div className='HeaderMiddle'>
+                    <Link to='/'>{props.title}</Link>
                 </div>
-                <div className="HeaderRight">{header_links}</div>
+                <div className='HeaderRight'>{header_links}</div>
             </div>
         </div>
     );

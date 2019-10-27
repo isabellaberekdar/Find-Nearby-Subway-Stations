@@ -1,65 +1,65 @@
 .Middle {
-  display: flex;
+    display: flex;
 }
 
 .Left {
-  float: left;
+    float: left;
 }
 
 .Right {
-/*   background-color: turquoise;
- */  font-size: 1.41em;
-  width: 100%;
-  height: 100%;
+    /*   background-color: turquoise;
+ */
+    font-size: 1.41em;
+    width: 100%;
+    height: 100%;
 }
 .Right-Search {
-  
-/*   flex-direction: column;
- *//*   justify-content: center;
+    /*   flex-direction: column;
+ */ /*   justify-content: center;
   align-items: center; */
 }
 
 a {
-  color: rgb(134, 194, 194);
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition:.5s;
+    color: rgb(134, 194, 194);
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
-
-html, body {
-  width: 100%;
-  height: 100%;
-  font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-size: cover; 
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-size: cover;
 }
 
-.ChangeMode { 
-  width: 40vw;
-  height: 2.5em;
-  color: rgb(0, 0, 0);
-  background-color: rgb(134, 194, 194);
-  border: .15em solid transparent;
-  font-size: 1.1em;
-  font-weight: 700;
-  letter-spacing: .07em;
+.ChangeMode {
+    width: 40vw;
+    height: 2.5em;
+    color: rgb(0, 0, 0);
+    background-color: rgb(134, 194, 194);
+    border: 0.15em solid transparent;
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 0.07em;
 }
 
 .ChangeMode i {
-  margin-right: .6em;
-  color: rgb(20, 20, 20);
+    margin-right: 0.6em;
+    color: rgb(20, 20, 20);
 }
 
 .ChangeMode:hover {
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition:.5s;
-  background-color: rgb(192, 192, 192);
-  letter-spacing: .12em;
-  color: rgb(0, 0, 0);
-  font-weight: 700;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-color: rgb(192, 192, 192);
+    letter-spacing: 0.12em;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
 }

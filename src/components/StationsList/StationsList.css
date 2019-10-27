@@ -1,22 +1,22 @@
 .StationsList {
-  position: absolute; 
-  margin-top: 3.4em;
-  width: 40vw;
-  min-width: 40vw;
-  height: 85vh; 
-  max-height: 90vh; 
-  overflow: auto;
-  background-color: #ffffff;
-  z-index: 1001;
+    position: absolute;
+    margin-top: 3.4em;
+    width: 40vw;
+    min-width: 40vw;
+    height: 85vh;
+    max-height: 90vh;
+    overflow: auto;
+    background-color: #ffffff;
+    z-index: 1001;
 }
 
 .StationsList p {
-  font-size: 1.3em;
-  font-weight: 300;
-  line-height: 1rem;
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1rem;
 }
 
 .StationsList img {
-  height: 1.75em;
-  width: 1.75em;
+    height: 1.75em;
+    width: 1.75em;
 }

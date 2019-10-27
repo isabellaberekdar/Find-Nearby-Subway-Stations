@@ -1,132 +1,132 @@
 .FormContainer {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-content: center;
-  box-shadow: 15px 15px rgb(236, 220, 130);
-  background-color: rgb(241, 241, 241);
-  width: 50em;
-  height: 40em;
-  margin-top: 10em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    box-shadow: 15px 15px rgb(236, 220, 130);
+    background-color: rgb(241, 241, 241);
+    width: 50em;
+    height: 40em;
+    margin-top: 10em;
 }
 
 .FormContainer:hover {
-  box-shadow: 20px 20px rgb(236, 220, 130);
+    box-shadow: 20px 20px rgb(236, 220, 130);
 }
 
 .Form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  padding: 2em;
-  font-size: 1em;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2em;
+    font-size: 1em;
+    align-items: center;
 }
 
 .Form h1 {
-  font-size: 2em;
-  font-style: italic;
-  letter-spacing: 0.07em;
+    font-size: 2em;
+    font-style: italic;
+    letter-spacing: 0.07em;
 }
 
 .Form label {
-  font-size: 1.4em;
-  margin-top: 1em;
+    font-size: 1.4em;
+    margin-top: 1em;
 }
 
 .Form button {
-  padding-top: 0.9em;
-  padding-bottom: 0.9em;
-  width: 50%;
-  background-color: rgb(236, 220, 130);
-  border-color: transparent;
-  margin-top: 2em;
-  margin-bottom: 2em;
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
+    width: 50%;
+    background-color: rgb(236, 220, 130);
+    border-color: transparent;
+    margin-top: 2em;
+    margin-bottom: 2em;
 
-  font-size: 1em;
-  font-weight: 600;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 .Form button:hover {
-  background-color: rgb(224, 199, 116);
+    background-color: rgb(224, 199, 116);
 }
 
 .Form input {
-  padding: 0.5em;
-  margin: 0.6em;
-  font-size: 1.2em;
-  box-shadow: 2px 2px rgb(236, 220, 130);
-  border-color: rgb(43, 43, 43);
+    padding: 0.5em;
+    margin: 0.6em;
+    font-size: 1.2em;
+    box-shadow: 2px 2px rgb(236, 220, 130);
+    border-color: rgb(43, 43, 43);
 }
 
 .Form input:hover {
-  box-shadow: 3px 3px rgb(236, 220, 130);
+    box-shadow: 3px 3px rgb(236, 220, 130);
 }
 
 .RegistrationFormContainer {
-  padding-top: 2em;
-  padding-bottom: 4em;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-content: center;
-  box-shadow: 15px 15px rgb(134, 194, 194);
-  width: 50em;
-  height: 100%;
-  margin-top: 10em;
-  background-color: rgb(241, 241, 241);
+    padding-top: 2em;
+    padding-bottom: 4em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    box-shadow: 15px 15px rgb(134, 194, 194);
+    width: 50em;
+    height: 100%;
+    margin-top: 10em;
+    background-color: rgb(241, 241, 241);
 }
 .RegistrationForm {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  padding: 2em;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2em;
+    align-items: center;
 }
 
 .RegistrationFormContainer:hover {
-  box-shadow: 20px 20px rgb(134, 194, 194);
+    box-shadow: 20px 20px rgb(134, 194, 194);
 }
 
 .RegistrationForm h1 {
-  font-size: 2em;
-  font-style: italic;
-  letter-spacing: 0.07em;
-  /*     margin-bottom: 0.1em; */
+    font-size: 2em;
+    font-style: italic;
+    letter-spacing: 0.07em;
+    /*     margin-bottom: 0.1em; */
 }
 
 .RegistrationForm button {
-  padding-top: 0.9em;
-  padding-bottom: 0.9em;
-  width: 50%;
-  background-color: rgb(134, 194, 194);
-  border-color: transparent;
-  margin-top: 2em;
-  /*     margin-bottom: 2em; */
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
+    width: 50%;
+    background-color: rgb(134, 194, 194);
+    border-color: transparent;
+    margin-top: 2em;
+    /*     margin-bottom: 2em; */
 
-  font-size: 1em;
-  font-weight: 600;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 .RegistrationForm input {
-  padding: 0.5em;
-  margin: 0.6em;
-  font-size: 1.2em;
-  box-shadow: 2px 2px rgb(134, 194, 194);
-  border-color: rgb(43, 43, 43);
+    padding: 0.5em;
+    margin: 0.6em;
+    font-size: 1.2em;
+    box-shadow: 2px 2px rgb(134, 194, 194);
+    border-color: rgb(43, 43, 43);
 }
 
 .RegistrationForm button:hover {
-  background-color: rgb(95, 148, 148);
+    background-color: rgb(95, 148, 148);
 }
 
 .RegistrationForm input:hover {
-  box-shadow: 3px 3px rgb(134, 194, 194);
+    box-shadow: 3px 3px rgb(134, 194, 194);
 }
 
 .RegistrationForm label {
-  font-size: 1.4em;
-  margin-top: 1em;
+    font-size: 1.4em;
+    margin-top: 1em;
 }

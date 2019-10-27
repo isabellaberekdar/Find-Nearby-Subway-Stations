@@ -1,42 +1,39 @@
 /* Holds search bar container, stations list */
 .Search {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .SearchBarContainer {
-  background-color: #ffffff;
-  padding:.5em;
-  border-bottom: .1em solid rgb(233, 233, 233);
-  display: inline-flex;
-  background-color: #ffffff;
-  align-items: center;
-  width: 100%;
+    background-color: #ffffff;
+    padding: 0.5em;
+    border-bottom: 0.1em solid rgb(233, 233, 233);
+    display: inline-flex;
+    background-color: #ffffff;
+    align-items: center;
+    width: 100%;
 }
 
 .SearchBar {
-  border: .1rem solid transparent;
-  padding-left: 1.5em;
-  font-size: 1.2em;
-  font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: #ffffff;
-  width: 100%;
-  letter-spacing: .05em;
-
+    border: 0.1rem solid transparent;
+    padding-left: 1.5em;
+    font-size: 1.2em;
+    font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: #ffffff;
+    width: 100%;
+    letter-spacing: 0.05em;
 }
 .Search i {
-  font-size: 1.7em;
-  color: rgb(90, 90, 90);
-  background-color: #ffffff;
-  padding: .35em;
+    font-size: 1.7em;
+    color: rgb(90, 90, 90);
+    background-color: #ffffff;
+    padding: 0.35em;
 }
-
 
 .SearchBar::placeholder {
-  color: rgb(149, 149, 149);
+    color: rgb(149, 149, 149);
 }
 
-
 input:focus {
-  outline:none;
+    outline: none;
 }

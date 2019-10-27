@@ -2,11 +2,11 @@
     font-size: 0.7em;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 input::placeholder {
-    color: black
+    color: black;
 }
 
 @media only screen and (max-height: 950px) {

@@ -21,13 +21,12 @@ import "../App.css";
 
 class Index extends React.Component {
     state = {
-        mode: "search",       // modes: 'nearby', 'search'
-        mapView: "search"     // what to show on the map. 'search', 'nearby', or 'detail'
+        mode: "search", // modes: 'nearby', 'search'
+        mapView: "search" // what to show on the map. 'search', 'nearby', or 'detail'
     };
 
     toggleMapView = new_view => {
         this.setState({ mapView: new_view });
-
     };
 
     // new_mode should be a string: 'search' or 'nearby'
@@ -44,7 +43,6 @@ class Index extends React.Component {
             notes: "unknown"
         };
         this.props.setNearbyStationDetail(reset);
-
     };
 
     componentDidMount() {
@@ -81,18 +79,16 @@ class Index extends React.Component {
                         station={this.props.map.station_detail}
                         serviceInfo={this.props.map.service_information}
                         timeUpdated={this.props.map.time_updated}
-                        showDetail={
-                            this.props.map.station_detail.name !== "unknown"
-                        }
+                        showDetail={this.props.map.station_detail.name !== "unknown"}
                         toggleMap={this.toggleMapView}
                     />
                 </div>
             );
         }
         return (
-            <div className="All">
-                <div className="Middle">
-                    <div className="Left">
+            <div className='All'>
+                <div className='Middle'>
+                    <div className='Left'>
                         <Map
                             layerGroup={
                                 this.state.mode === "nearby"
@@ -102,25 +98,23 @@ class Index extends React.Component {
                             show={this.state.mapView}
                         />
                     </div>
-                    <div className="Right">
-                        <div className="Right-Search">
-                            <div className="SwitchModes">
+                    <div className='Right'>
+                        <div className='Right-Search'>
+                            <div className='SwitchModes'>
                                 {this.state.mode === "nearby" ? (
                                     <button
-                                        className="ChangeMode"
+                                        className='ChangeMode'
                                         onClick={() => this.toggleMode("search")}
                                     >
-                                        <i class="fas fa-search-location fa-lg"></i>
+                                        <i class='fas fa-search-location fa-lg'></i>
                                         SEARCH FOR STATIONS
                                     </button>
                                 ) : (
                                     <button
-                                        className="ChangeMode"
-                                        onClick={() =>
-                                            this.toggleMode("nearby")
-                                        }
+                                        className='ChangeMode'
+                                        onClick={() => this.toggleMode("nearby")}
                                     >
-                                        <i class="fas fa-map-marked-alt fa-lg"></i>
+                                        <i class='fas fa-map-marked-alt fa-lg'></i>
                                         FIND NEARBY STATIONS
                                     </button>
                                 )}

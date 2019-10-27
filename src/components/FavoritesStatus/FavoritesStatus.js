@@ -26,29 +26,22 @@ class FavoritesStatus extends React.Component {
     render() {
         let lineStatus = {};
         return (
-            <div className="FavoritesStatus">
+            <div className='FavoritesStatus'>
                 <div
-                    className="StatusHover"
-                    onClick={() =>
-                        this.props.AddOrDeleteFavorite(this.props.line)
-                    }
+                    className='StatusHover'
+                    onClick={() => this.props.AddOrDeleteFavorite(this.props.line)}
                     onMouseEnter={this.toggleHover}
                     onMouseLeave={this.toggleHover}
                 >
-
                     {this.props.icon}
                     {this.props.statusDetails ? (
-                        <h3 style={{ color: "rgb(255, 73, 73)" }}>
-                            PLANNED WORK
-                        </h3>
+                        <h3 style={{ color: "rgb(255, 73, 73)" }}>PLANNED WORK</h3>
                     ) : (
-                        <h3 style={{ color: "rgb(94, 187, 148)" }}>
-                            GOOD SERVICE
-                        </h3>
+                        <h3 style={{ color: "rgb(94, 187, 148)" }}>GOOD SERVICE</h3>
                     )}
 
                     {this.state.hover && this.props.statusDetails ? (
-                        <div className="FavoritesLineStatusDetail">
+                        <div className='FavoritesLineStatusDetail'>
                             <h4>Status:</h4>
                             {/* Filter out duplicate status updates */
                             this.props.statusDetails.forEach(status => {
@@ -60,24 +53,15 @@ class FavoritesStatus extends React.Component {
                                     />
                                 );
                             })}
-                            {Object.keys(lineStatus).map(
-                                key => lineStatus[key]
-                            )}
+                            {Object.keys(lineStatus).map(key => lineStatus[key])}
                         </div>
                     ) : null}
 
                     {this.state.hover ? (
-                        <i
-                            className={this.state.hoverClass}
-                            style={{ color: "red" }}
-                        ></i>
+                        <i className={this.state.hoverClass} style={{ color: "red" }}></i>
                     ) : (
-                        <i
-                            className={this.props.class}
-                            style={{ color: "red" }}
-                        ></i>
-                    )}      
-
+                        <i className={this.props.class} style={{ color: "red" }}></i>
+                    )}
                 </div>
             </div>
         );
