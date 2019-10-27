@@ -88,15 +88,8 @@ export const setServiceInformation = () => dispatch => {
     })
 })
 
-
 }
-
-
-
-const nearby = (position, lat_or_lon) => {
-  return ((Math.abs(position - lat_or_lon)) < 0.011)
-}     
-
+  
 
 export const setFilteredStations = new_stations => dispatch => {  
   dispatch({

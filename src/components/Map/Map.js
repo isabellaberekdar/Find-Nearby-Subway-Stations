@@ -2,15 +2,20 @@ import React from 'react';
 import './Map.css'
 import { connect } from 'react-redux'
 import { setUserCoordinates, setNearbyStations, setMarkers, setDetailMarker, setNearbyMarkers } from '../../redux/actions/map'
-
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import blue_icon from 'leaflet/dist/images/marker-icon.png';
 import icon from '../../icons/marker.png'
+
 const marker = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
+    iconSize: [25, 41],
+    /* shadowSize:   [50, 64], */
+    iconAnchor:   [12, 41],
+    shadowAnchor: [12, 41],
+	popupAnchor:  [-3, -76]
 })
 
 L.Marker.prototype.options.icon = marker;

@@ -3,19 +3,23 @@ import Station from '../Station/Station'
 import './StationsList.css'
 import { connect } from 'react-redux'
 import { setFilteredStations } from '../../redux/actions/map'
-import PropTypes from 'prop-types'
 import L from 'leaflet';
 import yellow_icon from 'leaflet/dist/images/marker-icon.png';
 import icon from '../../icons/marker.png'
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import 'leaflet/dist/leaflet.css';
+
 const marker = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
+    iconSize: [25, 41],
+    /* shadowSize:   [50, 64], */
+    iconAnchor:   [12, 41],
+    shadowAnchor: [12, 41],
+	popupAnchor:  [-3, -76]
 })
 
 L.Marker.prototype.options.icon = marker;
-
 
 const yellow_marker = L.icon({
     iconUrl: yellow_icon,

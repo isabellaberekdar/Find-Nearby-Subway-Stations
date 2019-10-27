@@ -1,8 +1,9 @@
 .StationsList {
   position: absolute; 
   margin-top: 3.4em;
-  width: 39vw;
-  height: 86vh; 
+  width: 40vw;
+  min-width: 40vw;
+  height: 85vh; 
   max-height: 90vh; 
   overflow: auto;
   background-color: #ffffff;

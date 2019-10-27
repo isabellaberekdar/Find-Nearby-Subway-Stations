@@ -110,7 +110,8 @@ class Index extends React.Component {
                                         className="ChangeMode"
                                         onClick={() => this.toggleMode("search")}
                                     >
-                                        Search for stations
+                                        <i class="fas fa-search-location fa-lg"></i>
+                                        SEARCH FOR STATIONS
                                     </button>
                                 ) : (
                                     <button
@@ -119,7 +120,8 @@ class Index extends React.Component {
                                             this.toggleMode("nearby")
                                         }
                                     >
-                                        Find nearby stations
+                                        <i class="fas fa-map-marked-alt fa-lg"></i>
+                                        FIND NEARBY STATIONS
                                     </button>
                                 )}
                             </div>

@@ -10,9 +10,15 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import blue_icon from 'leaflet/dist/images/marker-icon.png';
 import icon from '../../icons/marker.png'
+
 const marker = L.icon({
     iconUrl: icon,
     shadowUrl: iconShadow,
+    iconSize: [25, 41],
+    /* shadowSize:   [50, 64], */
+    iconAnchor:   [12, 41],
+    shadowAnchor: [12, 41],
+	popupAnchor:  [-3, -76]
 })
 
 L.Marker.prototype.options.icon = marker;
@@ -79,7 +85,7 @@ class StationSearch extends React.Component {
         return (
             <div className="Search">
                 <div className="SearchBarContainer">
-                    <i class="fas fa-search fa-2x" style={{"color":"gray"}}></i>
+                    <i class="fas fa-search fa-2x"></i>
                     <input 
                         className='SearchBar'
                         placeholder="Search for a station" 
