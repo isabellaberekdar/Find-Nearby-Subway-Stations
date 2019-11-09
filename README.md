@@ -11,3 +11,9 @@ The app queries the MTA’s API to provide live service updates and uses data fr
 
 
 Users can save train lines to their favorites to quickly view in one place whether or not any of their regular trains are having service issues.
+
+
+This is an updated version of an old project that I did. See the original project here:
+https://github.com/isabellaberekdar/Find-Nearby-Subway-Stations-Original
+
+https://nearbysubwaystations2.herokuapp.com/
